@@ -1,6 +1,8 @@
 package modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -13,21 +15,20 @@ public class Cita {
   private String estadoDeCita;
   private String areaDeAplicacion;
   private Date fechaDeCita;
-  private Date horaDeCita;
+  private String horaDeCita;
   private String observaciones;
   private Paciente paciente;
   private ArrayList<Bitacora> bitacora;
 
   public Cita() {}
 
-  public Cita(int pIdentificador, String pEstadoDeCita, String pAreaDeAplicacion,
-        Date pFechaDeCita, Date pHoraDeCita, String pObservaciones, Paciente pPaciente) {
+  public Cita(String pEstadoDeCita, String pAreaDeAplicacion,
+        String pHoraDeCita, String pObservaciones, Paciente pPaciente) {
       
-    this.setIdentificador(pIdentificador);
     this.setEstadoDeCita(pEstadoDeCita);
     this.setAreaDeAplicacion(pAreaDeAplicacion);
-    this.setFechaDeCita(pFechaDeCita);
-    this.setHoraDeCita(pHoraDeCita);
+    this.setFechaDeCita();
+    setHoraDeCita(pHoraDeCita);
     this.setObservaciones(pObservaciones);
     this.setPaciente(pPaciente);
     
@@ -45,11 +46,12 @@ public class Cita {
     return areaDeAplicacion;
   }
 
-  public Date getFechaDeCita() {
-    return fechaDeCita;
+  public String getFechaDeCita() {
+	  SimpleDateFormat mascara = new SimpleDateFormat("yyyy-MM-dd");
+      return mascara.format(fechaDeCita);
   }
 
-  public Date getHoraDeCita() {
+  public String getHoraDeCita() {
     return horaDeCita;
   }
 
@@ -77,12 +79,14 @@ public class Cita {
     this.areaDeAplicacion = pAreaDeAplicacion;
   }
 
-  public void setFechaDeCita(Date pFechaDeCita) {
-    this.fechaDeCita = pFechaDeCita;
+  public void setFechaDeCita() {
+      Calendar calendario;
+      calendario = Calendar.getInstance();
+      this.fechaDeCita = calendario.getTime();
   }
 
-  public void setHoraDeCita(Date pHoraDeCita) {
-    this.horaDeCita = pHoraDeCita;
+  public void setHoraDeCita(String phorarioCita) {
+      this.horaDeCita = phorarioCita;
   }
 
   public void setObservaciones(String pObservaciones) {

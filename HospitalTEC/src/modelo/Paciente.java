@@ -11,7 +11,7 @@ public class Paciente {
     
   private int cedula;
   private String nombre;
-  private Date fechaDeNacimiento;
+  private String fechaDeNacimiento;
   private String tipoDeSangre;
   private String nacionalidad;
   private String provincia;
@@ -24,7 +24,7 @@ public class Paciente {
 
   public Paciente() {}
 
-  public Paciente(int pCedula, String pNombre, Date pFechaNacimiento, String pTipoDeSangre,
+  public Paciente(int pCedula, String pNombre, String pFechaNacimiento, String pTipoDeSangre,
 		  String pNacionalidad, String pProvincia, String pCanton, String pDistrito){
     this.setCedula(pCedula);
     this.setNombre(pNombre);
@@ -48,7 +48,7 @@ public class Paciente {
     return nombre;
   }
 
-  public Date getFechaDeNacimiento() {
+  public String getFechaDeNacimiento() {
     return fechaDeNacimiento;
   }
 
@@ -96,7 +96,7 @@ public class Paciente {
     this.nombre = pNombre;
   }
 
-  public void setFechaDeNacimiento(Date pFechaDeNacimiento) {
+  public void setFechaDeNacimiento(String pFechaDeNacimiento) {
     this.fechaDeNacimiento = pFechaDeNacimiento;
   }
 

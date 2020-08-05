@@ -19,10 +19,9 @@ public class CentroDeAtencion {
 
   public CentroDeAtencion() {}
 
-  public CentroDeAtencion(int pCodigoCentro, String pNombre, String pUbicacion, 
+  public CentroDeAtencion(String pNombre, String pUbicacion, 
         int pCapacidadMaxima,String pTipoDeCentro) {
       
-    this.setCodigoCentro(pCodigoCentro);
     this.setNombre(pNombre); 
     this.setUbicacion(pUbicacion);
     this.setCapacidadMaxima(pCapacidadMaxima);

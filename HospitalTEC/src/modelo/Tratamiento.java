@@ -12,8 +12,7 @@ public class Tratamiento {
   private String tipoTratamiento;
   
   
-  public Tratamiento(int pCodigo, String pNombre, int pDosis, String pTipoTratamiento) {
-	this.setCodigo(pCodigo);
+  public Tratamiento(String pNombre, int pDosis, String pTipoTratamiento) {
 	this.setNombre(pNombre);
 	this.setDosis(pDosis);
 	this.setTipoTratamiento(pTipoTratamiento);

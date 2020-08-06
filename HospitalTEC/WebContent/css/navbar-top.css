@@ -1,0 +1,9 @@
+/* Show it is fixed to the top */
+.nav-top {
+  min-height: 75rem;
+  top: 0;
+  display:block;
+  position: fixed;
+  padding:0;
+  margin:0;
+}

@@ -15,13 +15,6 @@ public class Administrador {
   private ArrayList<String> areaEspecialidad;
   private ArrayList<CentroDeAtencion> centrosDeAtencion;
   
-  public Administrador(int pCedula, String pContrasenna) {
-	this.setCedula(pCedula);
-	this.setContrasenna(pContrasenna);
-	this.setCatalogoDiagnostico();
-	this.setTipoDeCentro();
-	this.setAreaEspecialidad();
-  }
 
   public int getCedula() {
 	return cedula;

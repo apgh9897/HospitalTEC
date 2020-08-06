@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  *
- * @author PriscillaGonzalez
+ * @author Priscilla Gonzalez, Yasuara Espinoza y Maria Jose Plácido
  */
 public class Paciente {
     
@@ -16,24 +16,19 @@ public class Paciente {
   private String nacionalidad;
   private String provincia;
   private String canton;
-  private String distrito;
   private ArrayList<Integer> numerosDeTelefono;
   private ArrayList<Cita> citas;
   private ArrayList<Diagnostico> diagnosticos;
   private ArrayList<Tratamiento> tratamientos;
 
-  public Paciente() {}
-
-  public Paciente(int pCedula, String pNombre, String pFechaNacimiento, String pTipoDeSangre,
-		  String pNacionalidad, String pProvincia, String pCanton, String pDistrito){
-    this.setCedula(pCedula);
+  public Paciente(String pNombre, String pFechaNacimiento, String pTipoDeSangre,
+		  String pNacionalidad, String pProvincia, String pCanton){
     this.setNombre(pNombre);
     this.setFechaDeNacimiento(pFechaNacimiento);
     this.setTipoDeSangre(pTipoDeSangre);
     this.setNacionalidad(pNacionalidad);
     this.setProvincia(pProvincia);
     this.setCanton(pCanton);
-    this.setDistrito(pDistrito);
     this.setNumerosDeTelefono();
     this.setCitas();
     this.setDiagnosticos();
@@ -66,10 +61,6 @@ public class Paciente {
 
   public String getCanton() {
     return canton;
-  }
-
-  public String getDistrito() {
-    return distrito;
   }
 
   public ArrayList<Integer> getNumerosDeTelefono() {
@@ -114,10 +105,6 @@ public class Paciente {
 
   public void setCanton(String pCanton) {
     this.canton = pCanton;
-  }
-
-  public void setDistrito(String pDistrito) {
-    this.distrito = pDistrito;
   }
 
   public void setNumerosDeTelefono() {

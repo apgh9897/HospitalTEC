@@ -7,28 +7,16 @@ import java.util.Date;
  *
  * @author PriscillaGonzalez
  */
-public class Funcionario {
+public class Funcionario extends Usuario {
 
-  private int cedula;
   private String nombre;
   private String tipoDeFuncionario;
-  private Date fechaDeIngreso;
-  private ArrayList<String> areaDeTrabajo;
+  private String fechaDeIngreso;
+  private String areaDeTrabajo;
   private CentroDeAtencion centroDeAtencion;
-  
-  public Funcionario() {}
 
-  public Funcionario(int pCedula, String pNombre, String pTipoDeFuncionario, CentroDeAtencion pCentroDeAtencion) {
-    this.setCedula(pCedula);
-    this.setNombre(pNombre);
-    this.setTipoDeFuncionario(pTipoDeFuncionario);
-    this.setFechaDeIngreso();
-    this.setAreaDeTrabajo();
-    this.setCentroDeAtencion(pCentroDeAtencion);
-  }
-
-  public int getCedula() {
-    return cedula;
+  public Funcionario() {
+	super();
   }
 
   public String getNombre() {
@@ -39,20 +27,16 @@ public class Funcionario {
     return tipoDeFuncionario;
   }
 
-  public Date getFechaDeIngreso() {
+  public String getFechaDeIngreso() {
     return fechaDeIngreso;
   }
 
-  public ArrayList<String> getAreaDeTrabajo() {
+  public String getAreaDeTrabajo() {
     return areaDeTrabajo;
   }
   
   public CentroDeAtencion getCentroDeAtencion() {
     return centroDeAtencion;
-  }
-
-  public void setCedula(int pCedula) {
-    this.cedula = pCedula;
   }
 
   public void setNombre(String pNombre) {
@@ -63,12 +47,12 @@ public class Funcionario {
     this.tipoDeFuncionario = pTipoDeFuncionario;
   }
 
-  public void setFechaDeIngreso() {
-    //this.fechaDeIngreso = pFechaDeIngreso;
+  public void setFechaDeIngreso(String pFechaDeIngreso) {
+    this.fechaDeIngreso = pFechaDeIngreso;
   }
 
-  public void setAreaDeTrabajo() {
-    this.areaDeTrabajo = new ArrayList<>();
+  public void setAreaDeTrabajo(String pAreaDeTrabajo) {
+    this.areaDeTrabajo = pAreaDeTrabajo;
   }
   
   public void setCentroDeAtencion(CentroDeAtencion pCentroDeAtencion) {

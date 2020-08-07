@@ -7,13 +7,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import businessLogic.user.Student;
+
 /**
  * Servlet implementation class AgregarPaciente
  */
 @WebServlet("/AgregarPaciente")
 public class AgregarPaciente extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Paciente pacientes = new Paciente();
+	private Paciente paciente = new Paciente();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -35,9 +37,15 @@ public class AgregarPaciente extends HttpServlet {
 		String fechaNacimiento = request.getParameter("FechaNacimiento");
 		String nacionalidad = request.getParameter("Nacionalidad");
 		String provincia = request.getParameter("Provincia");
-		String canton = request.getParameter("Canton");
+
 		
-		Paciente paciente = new Paciente(nombre,fechaNacimiento,tipoSangre,nacionalidad, provincia, canton);
+		Paciente(int pCedula, String pNombre, String pFechaNacimiento, String pTipoDeSangre,
+				  String pNacionalidad, String pProvincia, String email;
+				  
+		Paciente pacienteNuevo = new Paciente(cedula,nombre,fechaNacimiento,tipoSangre,nacionalidad,provincia,email);
+		
+		Student newStudent = new Student(id, name, lastName, email, password);
+
 	}
 
 }

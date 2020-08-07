@@ -18,7 +18,7 @@ public class TestConexion {
 		//TratamientoDAO td = new TratamientoDAO();
 		//td.registrarTratamiento(tratamiento1);
 		
-		Administrador admin = new Administrador(117340434, "marip");
+		//Administrador admin = new Administrador(117340434, "marip");
 		
 		//CentroDeAtencion centro = new CentroDeAtencion("San Juan de Dios", "San Jose", 577, "Hospital");
 		//CentroAtencionDAO cd = new CentroAtencionDAO();
@@ -27,11 +27,11 @@ public class TestConexion {
 		
 		
 	
-		Paciente paciente1 = new Paciente(117340437, "Mariana", "1995/05/05","A +" , "Costarriccense", "San Jose", "Curridabat", "Curridabat");
+		//Paciente paciente1 = new Paciente(117340437, "Mariana", "1995/05/05","A +" , "Costarriccense", "San Jose", "Curridabat", "Curridabat");
 		
 		
-		Cita cita1 = new Cita("Registrada", "Odontologia", "9:00:00", "Primera cita", paciente1);
-		CitaDAO citaD = new CitaDAO();
+		//Cita cita1 = new Cita("Registrada", "Odontologia", "9:00:00", "Primera cita", paciente1);
+		//CitaDAO citaD = new CitaDAO();
 		//cita1.setEstadoDeCita("Asignada");
 		//citaD.registrarCita(cita1);
 		//cita1.setIdentificador(2);
@@ -42,7 +42,7 @@ public class TestConexion {
 		//citaD.registrarEstadoCita("ASIGNADA");
 		//citaD.filtroPacienteEspecialidadCita(cita1);
 		//citaD.filtroPacienteEstadoCita(cita1);
-		citaD.filtroPacienteFechaCita(cita1);
+		//citaD.filtroPacienteFechaCita(cita1);
 		
 	}
 }

@@ -75,14 +75,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Susana Distancia" value="" required>
+            <input type="text" class="form-control" id="firstName" placeholder="Nombre del Paciente" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Cedula</label>
-            <input type="text" class="form-control" id="Cedula" placeholder="305130256" value="" required>
+            <input type="text" class="form-control" id="Cedula" placeholder="Cedula" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -90,16 +90,8 @@
         </div>
 
         <div class="mb-3">
-          <label for="email">Email <span class="text-muted"></span></label>
-          <input type="email" class="form-control" id="email" placeholder="susanitaBebe@yahoo.com">
-          <div class="invalid-feedback">
-            Please enter a valid email address for shipping updates.
-          </div>
-        </div>
-
-        <div class="mb-3">
           <label for="address">Tipos de Sangre</label>
-          <input type="text" class="form-control" id="TipoSangre" placeholder="AB+" required>
+          <input type="text" class="form-control" id="TipoSangre" placeholder="Tipo de Sangre" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -107,7 +99,7 @@
 
         <div class="mb-3">
           <label for="address2">Fecha de Nacimiento <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="FechaNacimiento" placeholder="14/10/1998">
+          <input type="text" class="form-control" id="FechaNacimiento" placeholder="Fecha de nacimiento">
         </div>
         <div class="mb-3">
           <label for="address2">Nacionalidad<span class="text-muted"></span></label>
@@ -122,13 +114,7 @@
               Please select a valid country.
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="state">Cantón</label>
-             <input type="text" class="form-control" id="Canton" placeholder="Cantón">
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
-        </div>
+
 
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Paciente</button>
       </form>

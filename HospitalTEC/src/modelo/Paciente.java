@@ -15,20 +15,19 @@ public class Paciente {
   private String tipoDeSangre;
   private String nacionalidad;
   private String provincia;
-  private String canton;
   private ArrayList<Integer> numerosDeTelefono;
   private ArrayList<Cita> citas;
   private ArrayList<Diagnostico> diagnosticos;
   private ArrayList<Tratamiento> tratamientos;
 
-  public Paciente(String pNombre, String pFechaNacimiento, String pTipoDeSangre,
-		  String pNacionalidad, String pProvincia, String pCanton){
+  public Paciente(int pCedula, String pNombre, String pFechaNacimiento, String pTipoDeSangre,
+		  String pNacionalidad, String pProvincia){
+	this.setCedula(pCedula);
     this.setNombre(pNombre);
     this.setFechaDeNacimiento(pFechaNacimiento);
     this.setTipoDeSangre(pTipoDeSangre);
     this.setNacionalidad(pNacionalidad);
     this.setProvincia(pProvincia);
-    this.setCanton(pCanton);
     this.setNumerosDeTelefono();
     this.setCitas();
     this.setDiagnosticos();
@@ -58,11 +57,7 @@ public class Paciente {
   public String getProvincia() {
     return provincia;
   }
-
-  public String getCanton() {
-    return canton;
-  }
-
+  
   public ArrayList<Integer> getNumerosDeTelefono() {
     return numerosDeTelefono;
   }
@@ -101,10 +96,6 @@ public class Paciente {
 
   public void setProvincia(String pProvincia) {
     this.provincia = pProvincia;
-  }
-
-  public void setCanton(String pCanton) {
-    this.canton = pCanton;
   }
 
   public void setNumerosDeTelefono() {

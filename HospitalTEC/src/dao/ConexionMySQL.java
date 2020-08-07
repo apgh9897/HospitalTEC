@@ -6,6 +6,10 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 import com.mysql.jdbc.Statement;
+/**
+*
+* @author MariaJosePlacido
+*/
 
 public class ConexionMySQL {
  static Connection con;

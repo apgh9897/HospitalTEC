@@ -1,11 +1,12 @@
 package dao;
-import java.sql.Connection;
+
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-import com.mysql.jdbc.Statement;
+import com.mysql.jdbc.Connection;
 /**
 *
 * @author MariaJosePlacido
@@ -17,7 +18,7 @@ public class ConexionMySQL {
  static ResultSet rs;
  private static final String CONTROLADOR = "com.mysql.jdbc.Driver";
  private static final String USER = "root";
- private static final String PASSWORD = "1234";
+ private static final String PASSWORD = "";
  private static final String URL ="jdbc:mysql://localhost:3306/hospital";
  
  static{
@@ -36,7 +37,7 @@ public class ConexionMySQL {
 	 
 	 Connection con = null;
 	 try {
-		 con = DriverManager.getConnection(URL, USER, PASSWORD);
+		 con = (Connection) DriverManager.getConnection(URL, USER, PASSWORD);
 		 System.out.println("Conexion ok");
 		 
 	 }catch(SQLException e) {

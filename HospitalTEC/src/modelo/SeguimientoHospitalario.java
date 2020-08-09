@@ -11,14 +11,16 @@ public class SeguimientoHospitalario {
   private String nombreFuncionarioSeguimiento;
   private String observacion;
   private String tratamiento;
+  private int idHospitalizacion;
 
   public SeguimientoHospitalario(String pFechaSeguimiento, String pNombreFuncionarioSeguimiento,
-		  String pObservacion, String pTratamiento) {
+		  String pObservacion, String pTratamiento, int idHospitalizacion) {
 	  
 	this.setFechaSeguimiento(pFechaSeguimiento);
 	this.setNombreFuncionarioSeguimiento(pNombreFuncionarioSeguimiento);
 	this.setObservacion(pObservacion);
 	this.setTratamiento(pTratamiento);
+	this.setIdHospitalizacion(idHospitalizacion);
 	
   }
 
@@ -41,6 +43,10 @@ public class SeguimientoHospitalario {
   public String getTratamiento() {
 	return tratamiento;
   }
+  
+  public int getIdHospitalizacion() {
+		return idHospitalizacion;
+	}
 
   public void setNumeroSeguimiento(int pNumeroSeguimiento) {
 	this.numeroSeguimiento = pNumeroSeguimiento;
@@ -61,6 +67,11 @@ public class SeguimientoHospitalario {
   public void setTratamiento(String pTratamiento) {
 	this.tratamiento = pTratamiento;
   }
+
+
+public void setIdHospitalizacion(int idHospitalizacion) {
+	this.idHospitalizacion = idHospitalizacion;
+}
   
-  
+ 
 }

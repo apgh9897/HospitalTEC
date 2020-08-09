@@ -1,15 +1,15 @@
 package modelo;
 
 import java.util.ArrayList;
-import java.util.Date;
+
 
 /**
  *
  * @author Priscilla Gonzalez, Yasuara Espinoza y Maria Jose Plácido
  */
-public class Paciente {
+public class Paciente extends Usuario {
     
-  private int cedula;
+  private String cedula;
   private String nombre;
   private String fechaDeNacimiento;
   private String tipoDeSangre;
@@ -20,8 +20,16 @@ public class Paciente {
   private ArrayList<Diagnostico> diagnosticos;
   private ArrayList<Tratamiento> tratamientos;
 
-  public Paciente(int pCedula, String pNombre, String pFechaNacimiento, String pTipoDeSangre,
-		  String pNacionalidad, String pProvincia){
+  
+
+public Paciente(String pUsuario, String pContrasenna) {
+	super(pUsuario, pContrasenna);
+	// TODO Auto-generated constructor stub
+}
+
+public Paciente(String pUsuario, String pContrasenna,String pCedula, String pNombre, 
+		String pFechaNacimiento, String pTipoDeSangre, String pNacionalidad, String pProvincia){
+	super(pUsuario, pContrasenna);
 	this.setCedula(pCedula);
     this.setNombre(pNombre);
     this.setFechaDeNacimiento(pFechaNacimiento);
@@ -34,7 +42,7 @@ public class Paciente {
     this.setTratamientos();
   }
 
-  public int getCedula() {
+  public String getCedula() {
     return cedula;
   }
 
@@ -74,7 +82,7 @@ public class Paciente {
     return tratamientos;
   }
 
-  public void setCedula(int pCedula) {
+  public void setCedula(String pCedula) {
     this.cedula = pCedula;
   }
 

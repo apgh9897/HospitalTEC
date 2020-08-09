@@ -1,5 +1,6 @@
 package dao;
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -8,10 +9,7 @@ import javax.swing.JOptionPane;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-import modelo.Cita;
-import modelo.Diagnostico;
 import modelo.Hospitalizacion;
-import modelo.Paciente;
 /**
 *
 * @author Maria Jose Placido
@@ -36,7 +34,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
         try {
             ps = (PreparedStatement) con.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, hospi.getNombreCentroDeAtencion());
-            ps.setInt(2, hospi.getCedulaPaciente());
+            ps.setString(2, hospi.getCedulaPaciente());
             ps.setString(3,hospi.getDiagnostico());
             ps.setString(4, hospi.getFechaInicio());
             ps.setString(5, hospi.getFechaFinal());
@@ -114,7 +112,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
         try {
             ps = (PreparedStatement) con.prepareStatement(sql);
             ps.setString(1, hospi.getNombreCentroDeAtencion());
-            ps.setInt(2, hospi.getCedulaPaciente());
+            ps.setString(2, hospi.getCedulaPaciente());
             ps.setString(3, hospi.getDiagnostico());
             ps.setString(4, hospi.getFechaInicio());
             ps.setString(5, hospi.getFechaFinal());
@@ -161,7 +159,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
              while(rs.next())
              {            			  
             	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));
@@ -215,7 +213,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
              while(rs.next())
              {            			  
             	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));
@@ -276,7 +274,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
             while(rs.next())
             {
             	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));
@@ -337,7 +335,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
              while(rs.next())
              {
              	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));
@@ -396,7 +394,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
              while(rs.next())
              {
               	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));
@@ -449,7 +447,7 @@ public class HospitalizacionDAO  extends ConexionMySQL {
              while(rs.next())
              {            			  
             	Hospitalizacion hospi = new Hospitalizacion(rs.getString("centroDeAtencion"), 
-            			rs.getInt("idPaciente"), rs.getString("nombreCompleto"),
+            			rs.getString("idPaciente"), rs.getString("nombreCompleto"),
             			rs.getString("diagnostico"),rs.getString("fechaInicio"),
             			rs.getString("fechaFinal"), rs.getString("areaDeTrabajo"), 
             			rs.getString("funcionario"));

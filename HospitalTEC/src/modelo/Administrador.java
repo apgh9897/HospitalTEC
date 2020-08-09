@@ -6,25 +6,27 @@ import java.util.ArrayList;
 *
 * @author PriscillaGonzalez
 */
-public class Administrador {
+public class Administrador extends Usuario{
 
-  private int cedula;
-  private String contrasenna;
+
   private ArrayList<String[][]> catalogoDiagnostico; 
   private ArrayList<String> tipoDeCentro;
   private ArrayList<String> areaEspecialidad;
   private ArrayList<CentroDeAtencion> centrosDeAtencion;
   
 
-  public int getCedula() {
-	return cedula;
-  }
+  
 
-  public String getContrasenna() {
-	return contrasenna;
-  }
+  public Administrador() {
+	super();
+}
 
-  public ArrayList<String> getAreaEspecialidad() {
+public Administrador(String pUsuario, String pContrasenna) {
+	super(pUsuario, pContrasenna);
+
+}
+
+public ArrayList<String> getAreaEspecialidad() {
 	return areaEspecialidad;
   }
 
@@ -40,9 +42,7 @@ public class Administrador {
 		return centrosDeAtencion;
   }
 
-  public void setCedula(int pCedula) {
-	this.cedula = pCedula;
-  }
+
 
   public void setContrasenna(String pContrasenna) {
 	this.contrasenna = pContrasenna;

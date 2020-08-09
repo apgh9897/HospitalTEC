@@ -10,7 +10,7 @@ public class Hospitalizacion {
 	
   private int numeroHospitalizacion;
   private String nombreCentroDeAtencion;
-  private int cedulaPaciente;
+  private String cedulaPaciente;
   private String nombrePaciente;
   private String diagnostico;
   private String fechaInicio;
@@ -22,7 +22,7 @@ public class Hospitalizacion {
 
   public Hospitalizacion() {}
   
-  public Hospitalizacion(String pNombreCentroDeAtencion, int pCedulaPaciente,String pNombrePaciente,
+  public Hospitalizacion(String pNombreCentroDeAtencion, String pCedulaPaciente,String pNombrePaciente,
 		  String pDiagnostico, String pFechaInicio, String pFechaFinal, String pNombreFuncionario, 
 		  String pEspecialidad) {
 	  
@@ -46,7 +46,7 @@ public class Hospitalizacion {
 	return nombreCentroDeAtencion;
   }
 
-  public int getCedulaPaciente() {
+  public String getCedulaPaciente() {
 	return cedulaPaciente;
   }
 
@@ -86,7 +86,7 @@ public class Hospitalizacion {
 	this.nombreCentroDeAtencion = nombreCentroDeAtencion;
   }
 
-  public void setCedulaPaciente(int pCedulaPaciente) {
+  public void setCedulaPaciente(String pCedulaPaciente) {
 	this.cedulaPaciente = pCedulaPaciente;
   }
 

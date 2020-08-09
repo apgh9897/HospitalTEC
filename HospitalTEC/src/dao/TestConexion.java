@@ -1,12 +1,6 @@
 package dao;
 
-import java.util.Date;
 
-import modelo.Administrador;
-import modelo.CentroDeAtencion;
-import modelo.Cita;
-import modelo.Paciente;
-import modelo.Tratamiento;
 
 public class TestConexion {
 

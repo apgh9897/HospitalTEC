@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
@@ -11,6 +9,7 @@ public class Funcionario extends Usuario {
 
   private String nombre;
   private String tipoDeFuncionario;
+  private String cedula;
   private String fechaDeIngreso;
   private String areaDeTrabajo;
   private CentroDeAtencion centroDeAtencion;
@@ -38,6 +37,11 @@ public class Funcionario extends Usuario {
   public CentroDeAtencion getCentroDeAtencion() {
     return centroDeAtencion;
   }
+  
+  public String getCedula() {
+		return cedula;
+	}
+
 
   public void setNombre(String pNombre) {
     this.nombre = pNombre;
@@ -57,6 +61,11 @@ public class Funcionario extends Usuario {
   
   public void setCentroDeAtencion(CentroDeAtencion pCentroDeAtencion) {
 	  this.centroDeAtencion = pCentroDeAtencion;
+  }
+
+
+  public void setCedula(String cedula) {
+	  this.cedula = cedula;
   }
     
 }

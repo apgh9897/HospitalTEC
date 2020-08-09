@@ -8,29 +8,29 @@ import java.util.Date;
 */
 public class Bitacora {
 
-  private int numeroBitacora;
-  private Date fechaDeCita;
-  private Date horaDeCita;
+  private int idEstado;
+  private Date fecha;
+  private Date hora;
   private String funcionario;
   private int codigoCita;
 
-  public Bitacora(Date fechaDeCita, Date horaDeCita, String funcionario, int codigoCita) {
-	this.fechaDeCita = fechaDeCita;
-	this.horaDeCita = horaDeCita;
+  public Bitacora(Date fecha, Date hora, String funcionario, int codigoCita, int idEstado) {
+	this.fecha = fecha;
+	this.hora= hora;
 	this.funcionario = funcionario;
 	this.codigoCita = codigoCita;
   }
   
-  public int getNumeroBitacora() {
-    return numeroBitacora;
+  public int getIdEstado() {
+    return idEstado;
   }
   
-  public Date getFechaDeCita() {
-    return fechaDeCita;
+  public Date getFecha() {
+    return fecha;
   }
   
-  public Date getHoraDeCita() {
-    return horaDeCita;
+  public Date getHora() {
+    return hora;
   }
   
   public String getFuncionario() {
@@ -41,19 +41,33 @@ public class Bitacora {
     return codigoCita;
   }
   
-  public void setNumeroBitacora() {}
-  
-  public void setFechaDeCita(Date pFecha) {
-    this.fechaDeCita = pFecha;
+  public void setidEstado(int pIdEstado) {
+	  this.idEstado=pIdEstado;
   }
   
-  public void setHoraDeCita(Date pHora) {
-    this.horaDeCita = pHora;
+  public void setFecha(Date pFecha) {
+    this.fecha = pFecha;
+  }
+  
+  public void setHora(Date pHora) {
+    this.hora = pHora;
   }
   
   public void setFuncionario(String pNombreFuncionario) {
     this.funcionario = pNombreFuncionario;
   }
+  
+  public void setCodigoCita(int pCodigoCita) {
+	    this.codigoCita=pCodigoCita;
+	  }
+  
+  public void setFecha2(Date pFecha) {
+	    this.fecha=pFecha;
+	  }
+  
+  public void setHora2(Date pHora) {
+	    this.hora=pHora;
+	  }
   
 
 }

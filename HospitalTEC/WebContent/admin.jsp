@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!doctype html>
 <html lang="en">
+<!--BOOTSTRAP-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -63,7 +64,7 @@
   </div>
  <div class="col-md-8 order-md-1 container-form">
       <h4 class="mb-3">Agregar Tipo de Centro</h4>
-      <form class="needs-validation" novalidate>
+      	<form action="Admin" method="POST">
           <div class="mb-3">
             <label for="firstName">Nombre de Tipo de Centro</label>
             <input type="text" class="form-control" id="TipoCentro" placeholder="CCSS/EBAIS/Clinica" value="" required>
@@ -72,7 +73,7 @@
             </div>
         </div>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Tipo</button>
-      </form>
+        </form>
     </div>
   </div>
   .
@@ -91,7 +92,7 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Especialidad</button>
       </form>
     </div>
-  </div>
+
   .
   .
   .
@@ -125,10 +126,10 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Centro de Atencion</button>
       </form>
     </div>
-  </div>
+ 
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy; HospitalTEC 2020</p>
   </footer>
-</div>
+
 </html>

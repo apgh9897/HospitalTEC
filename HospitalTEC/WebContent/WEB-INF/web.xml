@@ -10,5 +10,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+	<servlet>
+		<servlet-name>Servlet Administrador</servlet-name>
+		<servlet-class>controlador.Admin</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Servlet Administradorn</servlet-name>
+		<url-pattern>/Admin/*</url-pattern>
+	</servlet-mapping>
 </web-app>
 </element>

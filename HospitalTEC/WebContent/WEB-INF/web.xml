@@ -10,15 +10,18 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-	<servlet>
-		<servlet-name>Servlet Administrador</servlet-name>
-		<servlet-class>controlador.Admin</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Servlet Administradorn</servlet-name>
-		<url-pattern>/Admin/*</url-pattern>
-	</servlet-mapping>
+ 
 </web-app>
+<dependencies>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.5.0-b01</version>
+	</dependency>	
+</dependencies>
 </element>

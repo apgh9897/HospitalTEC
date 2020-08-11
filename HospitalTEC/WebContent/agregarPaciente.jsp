@@ -63,15 +63,24 @@
   </div>
   <div class="col-md-8 order-md-1 container-form">
       <h4 class="mb-3">Completar forms</h4>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" novalidate action="AgregarPaciente" method="POST">
       
-      <div class="mb-3">
-          <label for="email">Centro Medico <span class="text-muted"></span></label>
-          <select class="custom-select d-block w-100" id="centroMedico" name="centroMedico" required>
-              <option value="">Choose...</option>
-          </select>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="user">Usuario</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario del Paciente" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="contrasenia">Contrasenia</label>
+            <input type="text" class="form-control" id="contrasenia" name="contrasenia" placeholder="Contrasenia" value="" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
         </div>
-        
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre</label>
@@ -114,6 +123,14 @@
               Please select a valid country.
             </div>
           </div>
+                    <div class="col-md-6 mb-3">
+            <label for="TipoCentro">TipoCentro</label>
+            <input type="text" class="form-control" id="TipoCentro" name="TipoCentro" placeholder="TipoCentro" value="" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
 
 
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Paciente</button>

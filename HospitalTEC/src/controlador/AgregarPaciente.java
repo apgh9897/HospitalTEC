@@ -41,27 +41,30 @@ public class AgregarPaciente extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//String cedula = request.getParameter("Cedula");
+		
 		String cedula = request.getParameter("Cedula");
 		String nombre = request.getParameter("firstName");
 		String fechaNacimiento = request.getParameter("FechaNacimiento");
 		String tipoSangre = request.getParameter("TipoSangre");
 		String nacionalidad = request.getParameter("Nacionalidad");
 		String provincia = request.getParameter("Provincia");
+		String usuario = request.getParameter("Usuario");
+		String contrasenia = request.getParameter("contrasenia");
 
-		Paciente nuevopaciente= new Paciente(cedula,nombre,fechaNacimiento,tipoSangre,nacionalidad,provincia);
+		Paciente nuevopaciente= new Paciente(usuario, contrasenia, cedula,nombre,fechaNacimiento,tipoSangre,nacionalidad,provincia);
 		PacienteDAO paciente = new PacienteDAO();
 		try {
-			paciente.regitrarPaciente(nuevopaciente);
+			paciente.registrarPaciente(nuevopaciente);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 		
 		response.sendRedirect("loginView.jsp");
+		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 		dispatcher.forward(request, response);
+
 	}
 
 	

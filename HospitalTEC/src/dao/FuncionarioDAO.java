@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 
+import javax.swing.JOptionPane;
+
 import modelo.Funcionario;
 import modelo.Hash;
 
@@ -174,6 +176,114 @@ public class FuncionarioDAO extends ConexionMySQL {
    }
 
    return fun;
+  }
+  /**
+   *Metodo que registra el area de trabajo en la base de datos
+   * @param pDescripcion
+   * @return
+   * @throws SQLException
+   */
+  public boolean registrarTipoAreaDeTrabajo (String pDescripcion) {
+    PreparedStatement ps = null;
+    Connection con = (Connection) conectar();
+    // CentroDeAtencion centro = new CentroDeAtencion();
+
+    String sql = "INSERT INTO TipoAreaDeTrabajo (descripcion) VALUES(?)";
+
+    try {
+      ps = con.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
+      ps.setString(1, pDescripcion);
+            
+      System.out.println(sql);
+            
+      ps.execute();
+            
+      rs = ps.getGeneratedKeys();// obtiene las llaves que genero la BD
+      rs.next();
+      // int idTipo = rs.getInt(1);
+           
+      //System.out.print(id);
+            
+      // le aseigna la llave al objeto del arraylist
+      // admin.getCentrosDeAtencion().add(centro);//agrega el centro a la lista del sistema
+            
+      JOptionPane.showMessageDialog(null, "Se ha creado un nuevo tipo de centro"); 
+            
+      return true;
+    } catch (SQLException e) {
+      System.err.println(e);
+      return false;
+    } finally {
+      try {
+        con.close();
+      } catch (SQLException e) {
+        System.err.println(e);
+      }
+    }
+  }
+
+    
+  /**
+   *Metodo que elimina un tipo de area de trabajo
+   * @param pId
+   * @return
+   * @throws SQLException
+   */
+  public void eliminarTipoAreaDeTrabajo(int pId){
+    PreparedStatement ps = null;
+    Connection con = (Connection) conectar();
+    	
+    try {
+      String query="DELETE FROM TipoAreaDeTrabajo WHERE =" + pId;
+      ps=con.prepareStatement(query);
+    		
+    		
+      System.out.println(ps);
+      JOptionPane.showMessageDialog(null,"El centro de atencion ha sido eliminado");
+    		
+      ps.executeUpdate();
+    } catch (Exception e) {
+      System.out.println(e);
+    } finally {
+      try {
+        con.close();
+      } catch (SQLException e) {
+        System.err.println(e);
+      }
+    }
+
+  }
+    
+  /**
+   *Metodo que modifica un centro de atencion
+   * @param Cita cita
+   * @return
+   * @throws SQLException
+   */
+  public boolean modificarTipoAreaDeTrabajo(int  pId, String pDescripcion) {
+    PreparedStatement ps = null;
+    Connection con =  (Connection) conectar();
+        
+
+    String sql = "UPDATE TipoAreaDeTrabajo SET descripcion ="  + "'"+pDescripcion+ "'" 
+        + " where  idTipo= " +pId ;
+
+    try {
+      ps = con.prepareStatement(sql);
+      ps.execute();
+
+      JOptionPane.showMessageDialog(null,"El tipo de centro de atencion ha sido modificado");
+      return true;
+    } catch (SQLException e) {
+      System.err.println(e);
+      return false;
+    } finally {
+       try {
+         con.close();
+       } catch (SQLException e) {
+         System.err.println(e);
+       }
+    }
   }
 
 }

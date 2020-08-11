@@ -64,7 +64,7 @@
   </div>
  <div class="col-md-8 order-md-1 container-form">
       <h4 class="mb-3">Agregar Tipo de Centro</h4>
-      	<form action="Admin" method="POST">
+      	<form class="needs-validation" novalidate action="Admin" method="POST">
           <div class="mb-3">
             <label for="firstName">Nombre de Tipo de Centro</label>
             <input type="text" class="form-control" id="TipoCentro" name="TipoCentro" placeholder="CCSS/EBAIS/Clinica" value="" required>
@@ -72,16 +72,31 @@
               Valid first name is required.
             </div>
         </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Tipo</button>
+        <button class="btn btn-primary btn-lg btn-block" value="CrearTipo" name="BtnAdmin" type="submit">Crear Tipo</button>
         </form>
     </div>
   </div>
+  
+   <div class="col-md-8 order-md-1 container-form">
+      <h4 class="mb-3">Eliminar Tipo de Centro</h4>
+      	<form class="needs-validation" novalidate action="Admin" method="POST">
+          <div class="mb-3">
+            <label for="firstName">Nombre Tipo de Centro</label>
+            <input type="text" class="form-control" id="tipoCentro" name="tipoCentro" placeholder="CCSS/EBAIS/Clinica" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" value="EliminarTipo" name="BtnAdmin" type="submit">Eliminar Tipo</button>
+        </form>
+    </div>
+
   .
   .
   .
   <div class="col-md-8 order-md-1 container-form">
       <h4 class="mb-3">Agregar Area de Especialidad</h4>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" novalidate action="Admin" method="POST">
           <div class="mb-3">
             <label for="firstName">Nombre de Area de Especialidad</label>
             <input type="text" class="form-control" id="AreaEspecialidad" name="AreaEspecialidad" placeholder="Oncologia" value="" required>
@@ -89,7 +104,7 @@
               Valid first name is required.
             </div>
         </div>
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Especialidad</button>
+        <button class="btn btn-primary btn-lg btn-block" value="CrearEspecialidad" name="BtnAdmin" type="submit">Crear Especialidad</button>
       </form>
     </div>
 
@@ -98,18 +113,27 @@
   .
   <div class="col-md-8 order-md-1 container-form">
       <h4 class="mb-3">Agregar Centro De Atencion</h4>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" novalidate action="Admin" method="POST">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre de Centro de Atencion</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Susana Distancia" value="" required>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Ubicacion</label>
-            <input type="text" class="form-control" id="Ubicacion" name="Ubicacion" placeholder="Ubicacion" value="" required>
+            <input type="text" class="form-control" id="Ubicacion" name="Ubicacion" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        
+          <div class="col-md-6 mb-3">
+            <label for="capacidad">Cpacidad Maxima</label>
+            <input type="text" class="form-control" id="Cap" name="Cap" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -118,12 +142,17 @@
 
         <div class="mb-3">
           <label for="email">Tipo de Centro <span class="text-muted"></span></label>
-          <select class="custom-select d-block w-100" id="tipoCentroSelect" name="tipoCentroSelect" required>
+          <select class="custom-select d-block w-100" id="tipoCentroSelect" name="" required>
               <option value="">Choose...</option>
+              <option value="">Clinica</option>
+              <option value="">EBAIS</option>
+              <option value="">Enfermeria</option>
+              <option value="">Hospital</option>
+              <option value="">Salud</option>
           </select>
         </div>
 
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Centro de Atencion</button>
+        <button class="btn btn-primary btn-lg btn-block" value="CrearCentro" name="BtnAdmin"type="submit">Crear Centro de Atencion</button>
       </form>
     </div>
  

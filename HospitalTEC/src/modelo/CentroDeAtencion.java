@@ -11,7 +11,7 @@ public class CentroDeAtencion {
   private int codigoCentro;
   private String nombre;
   private String ubicacion;
-  private int capacidadMaxima;
+  private String capacidadMaxima;
   private String tipoDeCentro;
   private ArrayList<Funcionario> funcionarios;
   private ArrayList<Cita> citas;
@@ -20,7 +20,7 @@ public class CentroDeAtencion {
   public CentroDeAtencion() {}
 
   public CentroDeAtencion(String pNombre, String pUbicacion, 
-        int pCapacidadMaxima,String pTipoDeCentro) {
+		  String pCapacidadMaxima,String pTipoDeCentro) {
       
     this.setNombre(pNombre); 
     this.setUbicacion(pUbicacion);
@@ -44,7 +44,7 @@ public class CentroDeAtencion {
     return ubicacion;
   }
 
-  public int getCapacidadMaxima() {
+  public String getCapacidadMaxima() {
     return capacidadMaxima;
   }
 
@@ -76,7 +76,7 @@ public class CentroDeAtencion {
     this.ubicacion = pUbicacion;
   }
 
-  public void setCapacidadMaxima(int pCapacidadMaxima) {
+  public void setCapacidadMaxima(String pCapacidadMaxima) {
     this.capacidadMaxima = pCapacidadMaxima;
   }
 

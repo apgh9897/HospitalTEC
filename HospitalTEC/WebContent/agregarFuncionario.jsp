@@ -69,13 +69,18 @@
           <label for="email">Centro de Atencion <span class="text-muted"></span></label>
           <select class="custom-select d-block w-100" id="tipoCentroSelect" name="tipoCentroSelect" required>
               <option value="">Choose...</option>
+               <option value="">Clinica</option>
+                <option value="">EBAIS</option>
+                 <option value="">Centro Medico</option>
+                  <option value="">Hospital Privado</option>
+                   <option value="">Hospital de la Caja</option>
           </select>
         </div>
         
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Susana Distancia" value="" required>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
@@ -93,7 +98,7 @@
 
         <div class="mb-3">
           <label for="email">Email <span class="text-muted"></span></label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="susanitaBebe@yahoo.com">
+          <input type="email" class="form-control" id="email" name="email" placeholder="">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -101,7 +106,7 @@
 
         <div class="mb-3">
           <label for="password">Password <span class="text-muted"></span></label>
-		  <input type="password" id="inputPassword" class="form-control" placeholder="Contraseï¿½a" required>
+		  <input type="password" id="inputPassword" class="form-control" placeholder="" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -109,13 +114,18 @@
 
         <div class="mb-3">
           <label for="address2">Fecha de ingreso <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="FechaIngreso" name="FechaIngreso" placeholder="15/08/2020">
+          <input type="text" class="form-control" id="FechaIngreso" name="FechaIngreso" placeholder="">
         </div>
         
         <div class="mb-3">
         	<label for="email">Area de Especialidad <span class="text-muted"></span></label>
              <select class="custom-select d-block w-100" id="areaEspecialidad" name="areaEspecialidad" required>
 	              <option value="">Choose...</option>
+	               <option value="">Oncologia</option>
+	                <option value="">Medicina Genera</option>
+	                 <option value="">Pediatria</option>
+	                 <option value="">Gastroenterología</option>
+	                 
             </select>
         </div>
 

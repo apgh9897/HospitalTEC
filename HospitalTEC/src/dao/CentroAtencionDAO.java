@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
@@ -35,7 +36,7 @@ public class CentroAtencionDAO extends ConexionMySQL {
       ps = con.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
       ps.setString(1, centro.getNombre());
       ps.setString(2, centro.getUbicacion());
-      ps.setInt(3, centro.getCapacidadMaxima());
+      ps.setString(3, centro.getCapacidadMaxima());
       ps.setString(4, centro.getTipoDeCentro());
             
       System.out.println(sql);
@@ -83,7 +84,7 @@ public class CentroAtencionDAO extends ConexionMySQL {
       ps = con.prepareStatement(sql);
       ps.setString(1, centro.getNombre());
       ps.setString(2, centro.getUbicacion());
-      ps.setInt(3, centro.getCapacidadMaxima());
+      ps.setString(3, centro.getCapacidadMaxima());
       ps.setString(4, centro.getTipoDeCentro());
       ps.execute();
 
@@ -153,7 +154,7 @@ public class CentroAtencionDAO extends ConexionMySQL {
       while(rs.next())
       {  
         CentroDeAtencion centro = new CentroDeAtencion(rs.getString("nombre"), rs.getString("lugar"),
-        		                  rs.getInt("capPacientes"), rs.getString("tipoCentro"));
+        		                  rs.getString("capPacientes"), rs.getString("tipoCentro"));
         centro.setCodigoCentro(rs.getInt("idCentroDeAtencion"));
             	  
              	
@@ -177,6 +178,41 @@ public class CentroAtencionDAO extends ConexionMySQL {
     System.out.print(consulta);
     return consulta;
   }
+  
+  public ArrayList<CentroDeAtencion> consultarCentros(){
+	  	PreparedStatement ps = null;
+	    ResultSet rs=null;
+	    Connection con = (Connection) conectar();
+	    ArrayList<CentroDeAtencion> centros = new ArrayList<CentroDeAtencion>();
+	    String sql = "SELECT idCentroDeAtencion, nombre, lugar, capPacientes, tipoCentro"
+			        + " from CentroDeAtencion ";
+
+	    try {
+	      ps = (PreparedStatement) con.prepareStatement(sql);
+	      rs = ps.executeQuery();
+	      while(rs.next())
+	      {  
+	        CentroDeAtencion centro = new CentroDeAtencion(rs.getString("nombre"), rs.getString("lugar"),
+	        		                  rs.getString("capPacientes"), rs.getString("tipoCentro"));
+	        centro.setCodigoCentro(rs.getInt("idCentroDeAtencion"));
+	            	  
+	        centros.add(centro);     	
+	             	
+
+	       }
+	    } catch (SQLException e) {
+	      System.err.println(e);
+
+	    } finally {
+	      try {
+	        con.close();
+	      } catch (SQLException e) {
+	        System.err.println(e);
+	             }
+	    }
+	 
+	    return centros;
+	  }
     
   /**
    *Metodo que registra el tipo de centro de atencion en la base de datos
@@ -286,5 +322,6 @@ public class CentroAtencionDAO extends ConexionMySQL {
        }
     }
   }
+  
     
 }

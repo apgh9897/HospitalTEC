@@ -18,7 +18,7 @@ public class ConexionMySQL {
  static ResultSet rs;
  private static final String CONTROLADOR = "com.mysql.jdbc.Driver";
  private static final String USER = "root";
- private static final String PASSWORD = "";
+ private static final String PASSWORD = "1234";
  private static final String URL ="jdbc:mysql://localhost:3306/hospital";
  
  static{

@@ -67,7 +67,7 @@
       
       <div class="mb-3">
           <label for="email">Centro Medico <span class="text-muted"></span></label>
-          <select class="custom-select d-block w-100" id="centroMedico" required>
+          <select class="custom-select d-block w-100" id="centroMedico" name="centroMedico" required>
               <option value="">Choose...</option>
           </select>
         </div>
@@ -75,14 +75,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Nombre del Paciente" value="" required>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre del Paciente" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Cedula</label>
-            <input type="text" class="form-control" id="Cedula" placeholder="Cedula" value="" required>
+            <input type="text" class="form-control" id="Cedula" name="Cedula" placeholder="Cedula" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -91,7 +91,7 @@
 
         <div class="mb-3">
           <label for="address">Tipos de Sangre</label>
-          <input type="text" class="form-control" id="TipoSangre" placeholder="Tipo de Sangre" required>
+          <input type="text" class="form-control" id="TipoSangre" name="TipoSangre" placeholder="Tipo de Sangre" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -99,17 +99,17 @@
 
         <div class="mb-3">
           <label for="address2">Fecha de Nacimiento <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="FechaNacimiento" placeholder="Fecha de nacimiento">
+          <input type="text" class="form-control" id="FechaNacimiento" name="FechaNacimiento" placeholder="Fecha de nacimiento">
         </div>
         <div class="mb-3">
           <label for="address2">Nacionalidad<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="Nacionalidad" placeholder="Nacionalidad">
+          <input type="text" class="form-control" id="Nacionalidad" name="Nacionalidad" placeholder="Nacionalidad">
         </div>
 
         <div class="row">
           <div class="col-md-5 mb-3">
             <label for="country">Provincia</label>
-            <input type="text" class="form-control" id="Provincia" placeholder="Provincia">
+            <input type="text" class="form-control" id="Provincia" name="Provincia" placeholder="Provincia">
             <div class="invalid-feedback">
               Please select a valid country.
             </div>

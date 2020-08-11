@@ -66,21 +66,21 @@
       <form class="needs-validation" novalidate>
           <div class="col-md-6 mb-3">
             <label for="email">Area de Aplicacion <span class="text-muted"></span></label>
-            <select class="custom-select d-block w-100" id="estadoDeCitaSelect" required>
+            <select class="custom-select d-block w-100" id="estadoDeCitaSelect" name="estadoDeCitaSelect" required>
               <option value="">Choose...</option>
           </select>
           </div>
           <div class="mb-3">
           	<label for="address2">Fecha de cita <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="FechaCita" placeholder="15/08/2020">
+          <input type="text" class="form-control" id="FechaCita" name="FechaCita" placeholder="15/08/2020">
         </div>
         <div class="mb-3">
           	<label for="address2">Hora de cita <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="HoraCita" placeholder="12:00">
+          <input type="text" class="form-control" id="HoraCita" name="HoraCita" placeholder="12:00">
         </div>
         <div class="mb-3">
           	<label for="address2">Observaciones <span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="observaciones" placeholder="">
+          <input type="text" class="form-control" id="observaciones" name="observaciones" placeholder="">
         </div>
         <button class="btn btn-primary btn-lg btn-block" type="submit">Crear Cita</button>
       </form>

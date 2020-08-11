@@ -42,8 +42,8 @@ public class Admin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String descripcion = request.getParameter("TipoCentro");
-		
+		String descripcion = request.getParameter("TipoCentro").toString();
+		System.out.println(descripcion);
 		try {
 			tipoCentro.registrarTipoDeCentroDeAtencion(descripcion);
 		} catch (Exception e) {

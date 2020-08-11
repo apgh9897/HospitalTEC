@@ -67,7 +67,7 @@
       	<form action="Admin" method="POST">
           <div class="mb-3">
             <label for="firstName">Nombre de Tipo de Centro</label>
-            <input type="text" class="form-control" id="TipoCentro" placeholder="CCSS/EBAIS/Clinica" value="" required>
+            <input type="text" class="form-control" id="TipoCentro" name="TipoCentro" placeholder="CCSS/EBAIS/Clinica" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
@@ -84,7 +84,7 @@
       <form class="needs-validation" novalidate>
           <div class="mb-3">
             <label for="firstName">Nombre de Area de Especialidad</label>
-            <input type="text" class="form-control" id="AreaEspecialidad" placeholder="Oncologia" value="" required>
+            <input type="text" class="form-control" id="AreaEspecialidad" name="AreaEspecialidad" placeholder="Oncologia" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
@@ -102,14 +102,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Nombre de Centro de Atencion</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Susana Distancia" value="" required>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Susana Distancia" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Ubicacion</label>
-            <input type="text" class="form-control" id="Ubicacion" placeholder="Ubicacion" value="" required>
+            <input type="text" class="form-control" id="Ubicacion" name="Ubicacion" placeholder="Ubicacion" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -118,7 +118,7 @@
 
         <div class="mb-3">
           <label for="email">Tipo de Centro <span class="text-muted"></span></label>
-          <select class="custom-select d-block w-100" id="tipoCentroSelect" required>
+          <select class="custom-select d-block w-100" id="tipoCentroSelect" name="tipoCentroSelect" required>
               <option value="">Choose...</option>
           </select>
         </div>
